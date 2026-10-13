@@ -27,7 +27,9 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
+/* Dark mode is switched off for now. To turn it back on, change
+   (prefers-color-scheme: dark-disabled) back to (prefers-color-scheme: dark). */
+@media (prefers-color-scheme: dark-disabled) {
   :root {
     --paper: #000000;
     --surface: #0d0f12;
