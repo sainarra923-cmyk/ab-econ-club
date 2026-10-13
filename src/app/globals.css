@@ -89,6 +89,13 @@ body {
   background: color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
+/* Show the pointing-hand cursor on every clickable button, like links get.
+   Tailwind resets buttons to the plain arrow, so this puts the hand back. */
+button:not(:disabled),
+[role="button"]:not(:disabled) {
+  cursor: pointer;
+}
+
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
