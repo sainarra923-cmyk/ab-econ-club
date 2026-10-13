@@ -1,0 +1,91 @@
+{
+  "officers": [
+    {
+      "slug": "club-president",
+      "name": "Club President",
+      "title": "President",
+      "grade": "12th grade",
+      "bio": "Placeholder officer. Replace this with a real name, photo, and a couple of sentences about what you're into in economics, or delete this profile from the Officers page in the admin area.",
+      "sort_order": 1
+    },
+    {
+      "slug": "vice-president",
+      "name": "Vice President",
+      "title": "Vice President",
+      "grade": "11th grade",
+      "bio": "Placeholder officer. Runs meeting logistics and the competition calendar.",
+      "sort_order": 2
+    },
+    {
+      "slug": "head-of-research",
+      "name": "Head of Research",
+      "title": "Head of Research",
+      "grade": "11th grade",
+      "bio": "Placeholder officer. Edits the blog and helps members turn ideas into posts.",
+      "sort_order": 3
+    }
+  ],
+  "posts": [
+    {
+      "slug": "why-the-fed-cant-fix-things-overnight",
+      "title": "Why the Fed can't fix things overnight",
+      "excerpt": "Interest rate changes take a year or more to work through the economy. Here's the chain of events, and why it makes the Fed's job so hard.",
+      "author": "head-of-research",
+      "tags": ["Macro", "Policy"],
+      "days_ago": 2,
+      "body": "When the Federal Reserve raises or cuts its target interest rate, the headlines make it sound like a switch being flipped. In practice it's more like turning a cargo ship. Milton Friedman described monetary policy as working with \"long and variable lags,\" and that phrase still explains most of what makes central banking hard.\n\n## The chain of events\n\nA rate change doesn't touch prices directly. It moves through a sequence of decisions made by millions of people:\n\n1. **Borrowing costs change.** Banks adjust rates on mortgages, car loans, credit cards, and business credit within days or weeks.\n2. **Spending plans change.** Families delay buying a house. A company postpones building a new warehouse. This takes months, because big purchases are planned well in advance.\n3. **Hiring changes.** With fewer orders coming in, businesses slow hiring. Workers with less income spend less.\n4. **Prices respond.** Only after demand has cooled do firms feel pressure to slow price increases.\n\nEach step has its own delay, and they stack. Economists' estimates vary, but the full effect on inflation is commonly thought to take a year or more to show up.\n\n## Why the lag matters\n\n| What the Fed sees today | What it actually reflects |\n| --- | --- |\n| This month's inflation number | Decisions made many months ago |\n| Today's job report | Hiring plans made last quarter |\n| A rate change it makes now | Conditions roughly a year from now |\n\nThis is the core problem. The Fed is steering by looking in the rearview mirror. If it waits until inflation has clearly fallen before cutting rates, it has probably waited too long, and the economy may already be slowing more than intended. If it acts early, it risks reacting to a blip.\n\n## What this means for reading the news\n\nNext time you see a headline that says a rate decision \"didn't work,\" check how long ago it happened. A move from three months ago has barely started doing its job. The more useful question is what the Fed expects the economy to look like a year out, which is why its statements and projections often move markets more than the rate decision itself.\n\n*This is a placeholder post written to show how the blog looks. Edit or delete it from the admin area.*"
+    },
+    {
+      "slug": "the-economics-of-the-lunch-line",
+      "title": "The economics of the lunch line",
+      "excerpt": "Why the cookies are always gone by the time you get there, and what a cafeteria queue has in common with concert tickets and rent control.",
+      "author": "vice-president",
+      "tags": ["Micro"],
+      "days_ago": 9,
+      "body": "Every school day, a few hundred students run a live experiment in one of economics' oldest questions: what happens when something is in demand but its price can't move?\n\n## A price that never changes\n\nThe cafeteria charges the same price for a cookie on Monday at 11:00 as it does on Friday at 12:30, no matter how many are left. When the price can't rise to match demand, something else has to decide who gets the goods. In the lunch line, that something is **time**.\n\nStudents who get there first get the cookies. Everyone else pays in minutes waiting, and some pay and still go home empty-handed. Economists call this **non-price rationing**: when price isn't allowed to do the sorting, queues, lotteries, or connections do it instead.\n\n## The same pattern, everywhere\n\n- **Concert tickets** sold below what fans would pay sell out in seconds, and the line moves online to whoever has the fastest connection or the best bot.\n- **Rent-controlled apartments** can have long waitlists, so the people who get them are often whoever applied first, not whoever needs them most.\n- **Free samples** at a store attract a line that would vanish if they cost a dollar.\n\nIn each case, the shortage isn't just about how much exists. It's about a price that's held below the point where the amount people want matches the amount available.\n\n## Is that bad?\n\nNot necessarily. Schools keep lunch prices fixed for good reasons: fairness, simplicity, and making sure everyone can afford a meal. Rationing by time can feel fairer than rationing by money. But it has a cost that doesn't show up on a receipt: all the minutes spent waiting.\n\nA few ideas a cafeteria could try, each with tradeoffs worth debating at a meeting:\n\n- Release cookies in batches across lunch periods so later students have a chance.\n- Let students pre-order.\n- Make more cookies, if the budget allows.\n\nWhich would you pick, and who wins and loses under each?\n\n*This is a placeholder post written to show how the blog looks. Edit or delete it from the admin area.*"
+    },
+    {
+      "slug": "welcome-to-ab-econ",
+      "title": "Welcome to AB Econ: what we're doing this year",
+      "excerpt": "Weekly discussions, competition prep, guest speakers, and a blog written by members. Here's how the year will work.",
+      "author": "club-president",
+      "tags": ["Club News"],
+      "days_ago": 16,
+      "body": "Welcome to the Acton-Boxborough Economics Club. Whether you've taken AP Macro or you've never read an economics article in your life, there's a place for you here.\n\n## What we do\n\n- **Weekly meetings.** We pick a topic from the news, break down the economics behind it, and argue about it.\n- **Competitions.** We prepare teams for economics competitions throughout the year. Check the Resources page for the list.\n- **Guest speakers.** People who use economics in their work, from finance to public policy, come talk to the club.\n- **This blog.** Members write short pieces explaining an idea, a chart, or a news story. Officers can help you edit before it goes up.\n\n## How to get involved\n\nCome to any meeting. No sign-up needed. If you want to write for the blog, talk to any officer and we'll help you get a first post published.\n\nTo get new posts in your inbox, sign up for the newsletter at the bottom of any page.\n\n*This is a placeholder post written to show how the blog looks. Edit or delete it from the admin area.*"
+    }
+  ],
+  "events": [
+    {
+      "title": "Club fair",
+      "description": "Find us at the club fair to sign up and meet the officers.",
+      "location": "Main lobby",
+      "day_offset": -14,
+      "start_time": "14:30",
+      "duration_minutes": 90
+    },
+    {
+      "title": "Weekly meeting: inflation in the news",
+      "description": "We'll look at the latest inflation report and talk through what's driving prices. No prep needed.",
+      "location": "Room TBD",
+      "day_offset": 3,
+      "start_time": "14:30",
+      "duration_minutes": 60
+    },
+    {
+      "title": "Guest speaker: careers that use economics",
+      "description": "A guest speaker talks about how economics shows up in their job. Bring questions.",
+      "location": "Library",
+      "day_offset": 10,
+      "start_time": "14:30",
+      "duration_minutes": 60
+    },
+    {
+      "title": "Competition practice round",
+      "description": "Timed practice questions in teams of three. Good prep for upcoming economics competitions.",
+      "location": "Room TBD",
+      "day_offset": 17,
+      "start_time": "14:30",
+      "duration_minutes": 75
+    }
+  ]
+}

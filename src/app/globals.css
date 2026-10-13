@@ -1,0 +1,307 @@
+@import "tailwindcss";
+@import "@fontsource-variable/newsreader/opsz.css";
+@import "@fontsource-variable/newsreader/opsz-italic.css";
+@import "@fontsource-variable/public-sans";
+
+/*
+  AB Econ palette
+  ink      #0E2340  navy, headlines and body text
+  paper    #F5F7FA  cool off-white page
+  gold     #B48A2C  old gold, rules and accents only
+  gold-ink #84621A  gold dark enough to use for text on paper
+  slate    #4B5A70  secondary text
+  rule     #D5DBE4  hairlines
+*/
+
+:root {
+  --paper: #f5f7fa;
+  --surface: #ffffff;
+  --ink: #0e2340;
+  --slate: #4b5a70;
+  --muted: #6d7a8d;
+  --rule: #d5dbe4;
+  --gold: #b48a2c;
+  --gold-ink: #84621a;
+  --navy-band: #0e2340;
+  --on-band: #f5f7fa;
+  --on-band-muted: #b7c2d3;
+  --danger: #a3271f;
+  --ok: #1f6b45;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0a1424;
+    --surface: #0f1c31;
+    --ink: #e7ecf3;
+    --slate: #aeb9c9;
+    --muted: #8593a8;
+    --rule: #22324c;
+    --gold: #cfa34a;
+    --gold-ink: #d9b265;
+    --navy-band: #11203a;
+    --on-band: #e7ecf3;
+    --on-band-muted: #9fadc2;
+    --danger: #f08a80;
+    --ok: #7fd1a4;
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-slate: var(--slate);
+  --color-muted: var(--muted);
+  --color-rule: var(--rule);
+  --color-gold: var(--gold);
+  --color-gold-ink: var(--gold-ink);
+  --color-band: var(--navy-band);
+  --color-on-band: var(--on-band);
+  --color-on-band-muted: var(--on-band-muted);
+  --color-danger: var(--danger);
+  --color-ok: var(--ok);
+  --font-serif: "Newsreader Variable", Georgia, "Times New Roman", serif;
+  --font-sans: "Public Sans Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+  background: var(--paper);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.55;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in srgb, var(--gold) 35%, transparent);
+}
+
+:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+/* The signature: an accounting double rule, like the line under a final total. */
+.double-rule {
+  border: 0;
+  height: 7px;
+  border-top: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+}
+
+.headline {
+  font-family: var(--font-serif);
+  font-optical-sizing: auto;
+  font-weight: 560;
+  letter-spacing: -0.012em;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.link {
+  color: var(--gold-ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.link:hover {
+  text-decoration-thickness: 2px;
+}
+
+.story-link {
+  text-decoration: none;
+  background-image: linear-gradient(var(--gold), var(--gold));
+  background-size: 0 1.5px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.25s ease;
+}
+.story-link:hover,
+.story-link:focus-visible {
+  background-size: 100% 1.5px;
+}
+
+/* Article body typography */
+.prose-econ {
+  font-family: var(--font-serif);
+  font-optical-sizing: auto;
+  font-size: 1.1875rem;
+  line-height: 1.7;
+  color: var(--ink);
+  max-width: 68ch;
+}
+.prose-econ > * + * {
+  margin-top: 1.1em;
+}
+.prose-econ h2 {
+  font-weight: 600;
+  font-size: 1.55rem;
+  line-height: 1.2;
+  margin-top: 1.9em;
+  letter-spacing: -0.01em;
+}
+.prose-econ h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-top: 1.6em;
+}
+.prose-econ a {
+  color: var(--gold-ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.prose-econ ul,
+.prose-econ ol {
+  padding-left: 1.4em;
+}
+.prose-econ ul {
+  list-style: disc;
+}
+.prose-econ ol {
+  list-style: decimal;
+}
+.prose-econ li + li {
+  margin-top: 0.45em;
+}
+.prose-econ li::marker {
+  color: var(--gold);
+}
+.prose-econ blockquote {
+  border-left: 3px solid var(--gold);
+  padding-left: 1.1em;
+  color: var(--slate);
+  font-style: italic;
+}
+.prose-econ img {
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--rule);
+}
+.prose-econ hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.2em 0;
+}
+.prose-econ code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85em;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  padding: 0.1em 0.35em;
+}
+.prose-econ table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  line-height: 1.45;
+  font-variant-numeric: tabular-nums;
+}
+.prose-econ thead th {
+  text-align: left;
+  font-weight: 650;
+  border-bottom: 1.5px solid var(--ink);
+  padding: 0.5em 0.75em 0.5em 0;
+}
+.prose-econ tbody td {
+  border-bottom: 1px solid var(--rule);
+  padding: 0.6em 0.75em 0.6em 0;
+  vertical-align: top;
+}
+.prose-econ .table-wrap {
+  overflow-x: auto;
+}
+
+/* Form controls used in the admin area and newsletter */
+.field {
+  width: 100%;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 0.6rem 0.75rem;
+  font: inherit;
+}
+.field:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 0;
+  border-color: transparent;
+}
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+.hint {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 3px;
+  padding: 0.6rem 1.05rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  line-height: 1.2;
+  border: 1px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+.btn-primary:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--ink) 86%, var(--gold));
+}
+.btn-gold {
+  background: var(--gold);
+  color: #10213b;
+}
+.btn-gold:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--gold) 85%, white);
+}
+.btn-quiet {
+  background: transparent;
+  color: var(--ink);
+  border-color: var(--rule);
+}
+.btn-quiet:hover:not(:disabled) {
+  border-color: var(--ink);
+}
+.btn-danger {
+  background: transparent;
+  color: var(--danger);
+  border-color: color-mix(in srgb, var(--danger) 40%, transparent);
+}
+.btn-danger:hover:not(:disabled) {
+  border-color: var(--danger);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
