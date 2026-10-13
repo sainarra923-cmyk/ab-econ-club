@@ -17,9 +17,23 @@ export const viewport: Viewport = {
   ],
 };
 
+// Runs before the page is drawn, so there's no flash of the wrong colors.
+// Uses the visitor's saved choice from the sun/moon toggle if they made one,
+// otherwise follows their device setting (and keeps following it if it changes).
+const themeScript = `(function(){
+  var d=document.documentElement, m=window.matchMedia("(prefers-color-scheme: dark)");
+  function saved(){try{return localStorage.getItem("theme")}catch(e){return null}}
+  function apply(){var t=saved();d.setAttribute("data-theme",t==="dark"||t==="light"?t:(m.matches?"dark":"light"))}
+  apply();
+  m.addEventListener("change",function(){if(!saved())apply()});
+})()`;
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body className="flex min-h-screen flex-col antialiased">{children}</body>
     </html>
   );

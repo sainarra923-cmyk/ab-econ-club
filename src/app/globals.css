@@ -27,28 +27,29 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper: #151515;
-    --surface: #1d1d1d;
-    --ink: #ededed;
-    --slate: #a8a8a8;
-    --muted: #808080;
-    --rule: #2e2e2e;
-    /* Navy for lines, buttons, and date marks. Slightly brighter than the
-       light-mode navy so it's still visible on a dark background. */
-    --accent: #2a4a8a;
-    /* Text links and tags: true navy text is unreadable on dark (about 1.6:1
-       contrast), so link text is light and the navy shows in the underline. */
-    --accent-ink: #c9d3e6;
-    --on-accent: #ffffff;
-    --navy-band: #0e2340;
-    --on-band: #e7ecf3;
-    --on-band-muted: #9fadc2;
-    --danger: #f08a80;
-    --ok: #7fd1a4;
-    color-scheme: dark;
-  }
+/* Dark mode. The script in src/app/layout.tsx sets data-theme="dark" on the page
+   when the visitor picks dark with the toggle, or when their device is in dark
+   mode and they have not picked. */
+:root[data-theme="dark"] {
+  --paper: #151515;
+  --surface: #1d1d1d;
+  --ink: #ededed;
+  --slate: #a8a8a8;
+  --muted: #808080;
+  --rule: #2e2e2e;
+  /* Navy for lines, buttons, and date marks. Slightly brighter than the
+     light-mode navy so it's still visible on a dark background. */
+  --accent: #2a4a8a;
+  /* Text links and tags: true navy text is unreadable on dark (about 1.6:1
+     contrast), so link text is light and the navy shows in the underline. */
+  --accent-ink: #c9d3e6;
+  --on-accent: #ffffff;
+  --navy-band: #0e2340;
+  --on-band: #e7ecf3;
+  --on-band-muted: #9fadc2;
+  --danger: #f08a80;
+  --ok: #7fd1a4;
+  color-scheme: dark;
 }
 
 @theme inline {
@@ -311,4 +312,15 @@ body {
     transition: none !important;
     animation: none !important;
   }
+}
+
+/* Sun/moon toggle: show the moon in light mode, the sun in dark mode. */
+.theme-toggle .icon-sun {
+  display: none;
+}
+:root[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+:root[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
 }
