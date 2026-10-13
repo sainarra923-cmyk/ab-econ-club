@@ -31,7 +31,7 @@ export default async function AccountPage({ searchParams }: { searchParams: Prom
         <section>
           <div className="mb-5 flex items-baseline justify-between border-b-2 border-ink pb-2">
             <h2 className="font-serif text-[1.25rem] font-semibold">Profile</h2>
-            <Link href={`/officers/${officer.profile.slug}`} className="text-[0.875rem] text-gold-ink hover:underline" target="_blank">
+            <Link href={`/officers/${officer.profile.slug}`} className="text-[0.875rem] text-accent-ink hover:underline" target="_blank">
               View public profile
             </Link>
           </div>

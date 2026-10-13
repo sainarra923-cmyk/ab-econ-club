@@ -45,16 +45,16 @@ export function escapeHtml(s: string): string {
 /** Plain, readable email layout that matches the site. */
 export function emailLayout(opts: { heading: string; bodyHtml: string; unsubscribeUrl?: string; siteUrl: string }) {
   const footer = opts.unsubscribeUrl
-    ? `<p style="margin:28px 0 0;font-size:13px;color:#6d7a8d;">You're getting this because you signed up for the AB Econ newsletter. <a href="${opts.unsubscribeUrl}" style="color:#84621a;">Unsubscribe</a>.</p>`
+    ? `<p style="margin:28px 0 0;font-size:13px;color:#6d7a8d;">You're getting this because you signed up for the AB Econ newsletter. <a href="${opts.unsubscribeUrl}" style="color:#1f4590;">Unsubscribe</a>.</p>`
     : "";
   return `<!doctype html><html><body style="margin:0;background:#f5f7fa;">
 <div style="max-width:600px;margin:0 auto;padding:32px 24px;font-family:Georgia,'Times New Roman',serif;color:#0e2340;">
   <p style="margin:0;font-family:Arial,sans-serif;font-size:12px;color:#4b5a70;">Acton-Boxborough</p>
   <p style="margin:0 0 10px;font-size:26px;font-weight:bold;">Economics Club</p>
-  <div style="border-top:2px solid #b48a2c;border-bottom:2px solid #b48a2c;height:4px;margin-bottom:28px;"></div>
+  <div style="border-top:2px solid #0e2340;border-bottom:2px solid #0e2340;height:4px;margin-bottom:28px;"></div>
   <h1 style="font-size:28px;line-height:1.2;margin:0 0 16px;font-weight:600;">${escapeHtml(opts.heading)}</h1>
   <div style="font-size:17px;line-height:1.65;">${opts.bodyHtml}</div>
   ${footer}
-  <p style="margin:12px 0 0;font-size:13px;"><a href="${opts.siteUrl}" style="color:#84621a;">${opts.siteUrl.replace(/^https?:\/\//, "")}</a></p>
+  <p style="margin:12px 0 0;font-size:13px;"><a href="${opts.siteUrl}" style="color:#1f4590;">${opts.siteUrl.replace(/^https?:\/\//, "")}</a></p>
 </div></body></html>`;
 }

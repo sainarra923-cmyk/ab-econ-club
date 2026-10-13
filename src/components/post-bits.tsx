@@ -8,7 +8,7 @@ export function TagLinks({ tags, className = "" }: { tags: string[]; className?:
     <ul className={`flex flex-wrap gap-x-3 gap-y-1 text-[0.8125rem] font-semibold ${className}`}>
       {tags.map((t) => (
         <li key={t}>
-          <Link href={`/blog?tag=${encodeURIComponent(t)}`} className="text-gold-ink hover:underline">
+          <Link href={`/blog?tag=${encodeURIComponent(t)}`} className="text-accent-ink hover:underline">
             {t}
           </Link>
         </li>
@@ -63,7 +63,7 @@ export function Avatar({ name, src, size = 56 }: { name: string; src: string | n
   return (
     <span
       aria-hidden="true"
-      className="headline flex shrink-0 items-center justify-center rounded-full border border-gold text-gold-ink"
+      className="headline flex shrink-0 items-center justify-center rounded-full border border-accent text-accent-ink"
       style={{ width: size, height: size, fontSize: size * 0.38 }}
     >
       {initials}

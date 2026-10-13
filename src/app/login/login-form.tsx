@@ -19,7 +19,7 @@ export function LoginForm({ next }: { next: string }) {
         <button type="submit" disabled={resetting} className="btn btn-primary w-full">
           {resetting ? "Sending" : "Send reset link"}
         </button>
-        <button type="button" onClick={() => setMode("login")} className="w-full text-sm text-gold-ink hover:underline">
+        <button type="button" onClick={() => setMode("login")} className="w-full text-sm text-accent-ink hover:underline">
           Back to log in
         </button>
       </form>
@@ -41,7 +41,7 @@ export function LoginForm({ next }: { next: string }) {
       <button type="submit" disabled={loggingIn} className="btn btn-primary w-full">
         {loggingIn ? "Logging in" : "Log in"}
       </button>
-      <button type="button" onClick={() => setMode("reset")} className="w-full text-sm text-gold-ink hover:underline">
+      <button type="button" onClick={() => setMode("reset")} className="w-full text-sm text-accent-ink hover:underline">
         Forgot your password?
       </button>
     </form>

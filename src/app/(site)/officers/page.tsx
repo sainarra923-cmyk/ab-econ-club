@@ -22,7 +22,7 @@ export default async function OfficersPage() {
                   <p className="font-serif text-[1.35rem] font-semibold leading-tight group-hover:underline">
                     {o.name}
                   </p>
-                  {o.title && <p className="mt-0.5 font-medium text-gold-ink">{o.title}</p>}
+                  {o.title && <p className="mt-0.5 font-medium text-accent-ink">{o.title}</p>}
                   {o.grade && <p className="text-[0.875rem] text-slate">{o.grade}</p>}
                 </div>
               </Link>

@@ -32,7 +32,7 @@ export default async function AdminLayout({ children }: { children: React.ReactN
           </div>
           <div className="flex items-center gap-4 text-[0.875rem]">
             <span className="hidden text-slate sm:inline">{officer.profile.name}</span>
-            <Link href="/" className="text-gold-ink hover:underline">
+            <Link href="/" className="text-accent-ink hover:underline">
               View site
             </Link>
             <form action={signOut}>

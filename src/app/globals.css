@@ -5,23 +5,20 @@
 
 /*
   AB Econ palette
-  ink      #0E2340  navy, headlines and body text
-  paper    #F5F7FA  cool off-white page
-  gold     #B48A2C  old gold, rules and accents only
-  gold-ink #84621A  gold dark enough to use for text on paper
-  slate    #4B5A70  secondary text
-  rule     #D5DBE4  hairlines
+  Page follows the device: white in light mode, black in dark mode.
+  Navy is the accent: rules, links, buttons, the event date marks.
 */
 
 :root {
-  --paper: #f5f7fa;
-  --surface: #ffffff;
-  --ink: #0e2340;
-  --slate: #4b5a70;
-  --muted: #6d7a8d;
-  --rule: #d5dbe4;
-  --gold: #b48a2c;
-  --gold-ink: #84621a;
+  --paper: #ffffff;
+  --surface: #f6f7f9;
+  --ink: #111418;
+  --slate: #4a5160;
+  --muted: #6b7280;
+  --rule: #e2e5ea;
+  --accent: #1d3a70;
+  --accent-ink: #1d3a70;
+  --on-accent: #ffffff;
   --navy-band: #0e2340;
   --on-band: #f5f7fa;
   --on-band-muted: #b7c2d3;
@@ -32,15 +29,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #0a1424;
-    --surface: #0f1c31;
-    --ink: #e7ecf3;
-    --slate: #aeb9c9;
-    --muted: #8593a8;
-    --rule: #22324c;
-    --gold: #cfa34a;
-    --gold-ink: #d9b265;
-    --navy-band: #11203a;
+    --paper: #000000;
+    --surface: #0d0f12;
+    --ink: #ededed;
+    --slate: #a6adb8;
+    --muted: #7d8592;
+    --rule: #24272d;
+    --accent: #7f9fd9;
+    --accent-ink: #9fb6e3;
+    --on-accent: #07142b;
+    --navy-band: #0c1a33;
     --on-band: #e7ecf3;
     --on-band-muted: #9fadc2;
     --danger: #f08a80;
@@ -56,8 +54,9 @@
   --color-slate: var(--slate);
   --color-muted: var(--muted);
   --color-rule: var(--rule);
-  --color-gold: var(--gold);
-  --color-gold-ink: var(--gold-ink);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-on-accent: var(--on-accent);
   --color-band: var(--navy-band);
   --color-on-band: var(--on-band);
   --color-on-band-muted: var(--on-band-muted);
@@ -82,11 +81,11 @@ body {
 }
 
 ::selection {
-  background: color-mix(in srgb, var(--gold) 35%, transparent);
+  background: color-mix(in srgb, var(--accent) 35%, transparent);
 }
 
 :focus-visible {
-  outline: 2px solid var(--gold);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -94,8 +93,8 @@ body {
 .double-rule {
   border: 0;
   height: 7px;
-  border-top: 2px solid var(--gold);
-  border-bottom: 2px solid var(--gold);
+  border-top: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
 }
 
 .headline {
@@ -108,7 +107,7 @@ body {
 }
 
 .link {
-  color: var(--gold-ink);
+  color: var(--accent-ink);
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
@@ -119,7 +118,7 @@ body {
 
 .story-link {
   text-decoration: none;
-  background-image: linear-gradient(var(--gold), var(--gold));
+  background-image: linear-gradient(var(--accent), var(--accent));
   background-size: 0 1.5px;
   background-position: 0 100%;
   background-repeat: no-repeat;
@@ -155,7 +154,7 @@ body {
   margin-top: 1.6em;
 }
 .prose-econ a {
-  color: var(--gold-ink);
+  color: var(--accent-ink);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -173,10 +172,10 @@ body {
   margin-top: 0.45em;
 }
 .prose-econ li::marker {
-  color: var(--gold);
+  color: var(--accent);
 }
 .prose-econ blockquote {
-  border-left: 3px solid var(--gold);
+  border-left: 3px solid var(--accent);
   padding-left: 1.1em;
   color: var(--slate);
   font-style: italic;
@@ -232,7 +231,7 @@ body {
   font: inherit;
 }
 .field:focus {
-  outline: 2px solid var(--gold);
+  outline: 2px solid var(--accent);
   outline-offset: 0;
   border-color: transparent;
 }
@@ -266,19 +265,22 @@ body {
   opacity: 0.55;
   cursor: not-allowed;
 }
-.btn-primary {
-  background: var(--ink);
-  color: var(--paper);
+.btn-primary,
+.btn-accent {
+  background: var(--accent);
+  color: var(--on-accent);
 }
-.btn-primary:hover:not(:disabled) {
-  background: color-mix(in srgb, var(--ink) 86%, var(--gold));
+.btn-primary:hover:not(:disabled),
+.btn-accent:hover:not(:disabled) {
+  background: color-mix(in srgb, var(--accent) 85%, var(--ink));
 }
-.btn-gold {
-  background: var(--gold);
-  color: #10213b;
+/* Light button for use on the navy footer band. */
+.btn-on-band {
+  background: var(--on-band);
+  color: #0e2340;
 }
-.btn-gold:hover:not(:disabled) {
-  background: color-mix(in srgb, var(--gold) 85%, white);
+.btn-on-band:hover:not(:disabled) {
+  background: #ffffff;
 }
 .btn-quiet {
   background: transparent;

@@ -24,7 +24,7 @@ export default async function OfficerPage({ params }: Props) {
         <div>
           <h1 className="headline text-[2.4rem] sm:text-[3rem]">{officer.name}</h1>
           <p className="mt-1 text-[1.0625rem]">
-            {officer.title && <span className="font-medium text-gold-ink">{officer.title}</span>}
+            {officer.title && <span className="font-medium text-accent-ink">{officer.title}</span>}
             {officer.title && officer.grade && <span className="text-slate">, </span>}
             {officer.grade && <span className="text-slate">{officer.grade}</span>}
           </p>

@@ -121,7 +121,7 @@ function SectionHeading({
       <h2 id={id} className="font-serif text-[1.25rem] font-semibold">
         {children}
       </h2>
-      <Link href={href} className="text-[0.875rem] font-medium text-gold-ink hover:underline">
+      <Link href={href} className="text-[0.875rem] font-medium text-accent-ink hover:underline">
         {linkLabel}
       </Link>
     </div>

@@ -6,7 +6,7 @@ export default function SiteLayout({ children }: { children: React.ReactNode }) 
   return (
     <>
       {!isSupabaseConfigured && (
-        <p className="bg-gold px-4 py-1.5 text-center text-[0.8125rem] font-medium text-[#10213b]">
+        <p className="bg-accent px-4 py-1.5 text-center text-[0.8125rem] font-medium text-on-accent">
           Preview: this is placeholder content. Real posts show up once the database is connected.
         </p>
       )}

@@ -28,7 +28,7 @@ export default async function EditPostPage({
   return (
     <>
       <p className="mb-2 text-[0.875rem]">
-        <Link href="/admin" className="text-gold-ink hover:underline">All posts</Link>
+        <Link href="/admin" className="text-accent-ink hover:underline">All posts</Link>
       </p>
       <PageTitle>{post.status === "published" ? "Edit post" : "Edit draft"}</PageTitle>
       <PostEditor post={post} userId={officer.userId} knownTags={knownTags} canEdit={canEdit} justDid={done} />

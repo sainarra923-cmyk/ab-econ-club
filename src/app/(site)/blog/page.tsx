@@ -68,7 +68,7 @@ function TagChip({ href, active, children }: { href: string; active: boolean; ch
       href={href}
       aria-current={active ? "page" : undefined}
       className={`inline-block rounded-full border px-3 py-1 font-medium transition-colors ${
-        active ? "border-ink bg-ink text-paper" : "border-rule text-slate hover:border-gold hover:text-ink"
+        active ? "border-ink bg-ink text-paper" : "border-rule text-slate hover:border-accent hover:text-ink"
       }`}
     >
       {children}

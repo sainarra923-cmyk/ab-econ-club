@@ -22,8 +22,8 @@ export function NavLinks() {
               <Link
                 href={l.href}
                 aria-current={active ? "page" : undefined}
-                className={`block px-2 py-1 transition-colors hover:text-gold-ink ${
-                  active ? "text-ink underline decoration-gold decoration-2 underline-offset-[6px]" : "text-slate"
+                className={`block px-2 py-1 transition-colors hover:text-accent-ink ${
+                  active ? "text-ink underline decoration-accent decoration-2 underline-offset-[6px]" : "text-slate"
                 }`}
               >
                 {l.label}

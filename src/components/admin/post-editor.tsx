@@ -188,7 +188,7 @@ export function PostEditor({ post, userId, knownTags, canEdit, justDid }: Props)
                     role="tab"
                     aria-selected={tab === t}
                     onClick={() => setTab(t)}
-                    className={`border-b-2 px-3 py-1 font-medium capitalize ${tab === t ? "border-gold text-ink" : "border-transparent text-slate"}`}
+                    className={`border-b-2 px-3 py-1 font-medium capitalize ${tab === t ? "border-accent text-ink" : "border-transparent text-slate"}`}
                   >
                     {t}
                   </button>
@@ -264,7 +264,7 @@ export function PostEditor({ post, userId, knownTags, canEdit, justDid }: Props)
                 </button>
               )}
               {isPublished && (
-                <a href={`/blog/${post!.slug}`} target="_blank" className="block pt-1 text-center text-[0.875rem] text-gold-ink hover:underline">
+                <a href={`/blog/${post!.slug}`} target="_blank" className="block pt-1 text-center text-[0.875rem] text-accent-ink hover:underline">
                   View on site
                 </a>
               )}
@@ -290,7 +290,7 @@ export function PostEditor({ post, userId, knownTags, canEdit, justDid }: Props)
                       key={t}
                       type="button"
                       onClick={() => addTag(t)}
-                      className="rounded-full border border-rule px-2.5 py-0.5 text-[0.8125rem] text-slate hover:border-gold hover:text-ink"
+                      className="rounded-full border border-rule px-2.5 py-0.5 text-[0.8125rem] text-slate hover:border-accent hover:text-ink"
                     >
                       + {t}
                     </button>

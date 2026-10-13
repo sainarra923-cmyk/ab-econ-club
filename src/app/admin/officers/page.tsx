@@ -44,7 +44,7 @@ export default async function AdminOfficersPage() {
                 <div className="mb-3">
                   <p className="font-semibold">
                     {p.name}
-                    {p.is_admin && <span className="ml-2 text-[0.8125rem] font-medium text-gold-ink">Admin</span>}
+                    {p.is_admin && <span className="ml-2 text-[0.8125rem] font-medium text-accent-ink">Admin</span>}
                   </p>
                   <p className="text-[0.8125rem] text-slate">{p.user_id ? email || "Has a login" : "Placeholder profile with no login"}</p>
                 </div>

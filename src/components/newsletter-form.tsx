@@ -34,7 +34,7 @@ export function NewsletterForm({ tone = "band" }: { tone?: "band" | "page" }) {
         <div aria-hidden="true" className="hidden">
           <input name="company" tabIndex={-1} autoComplete="off" />
         </div>
-        <button type="submit" disabled={pending} className="btn btn-gold">
+        <button type="submit" disabled={pending} className={`btn ${onBand ? "btn-on-band" : "btn-primary"}`}>
           {pending ? "Signing up" : "Sign up"}
         </button>
       </div>

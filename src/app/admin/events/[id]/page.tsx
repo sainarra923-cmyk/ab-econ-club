@@ -21,7 +21,7 @@ export default async function EditEventPage({ params }: { params: Promise<{ id: 
   return (
     <>
       <p className="mb-2 text-[0.875rem]">
-        <Link href="/admin/events" className="text-gold-ink hover:underline">All events</Link>
+        <Link href="/admin/events" className="text-accent-ink hover:underline">All events</Link>
       </p>
       <PageTitle>Edit event</PageTitle>
       <div className="max-w-3xl border border-rule bg-surface p-5 sm:p-6">

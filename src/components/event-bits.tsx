@@ -7,7 +7,7 @@ export function EventRow({ event, compact = false, past = false }: { event: Club
   return (
     <article className={`flex gap-4 border-t border-rule first-of-type:border-t-0 ${compact ? "py-4" : "py-6"} ${past ? "opacity-75" : ""}`}>
       <div
-        className={`flex w-14 shrink-0 flex-col items-center border-t-2 pt-1.5 text-center ${past ? "border-rule" : "border-gold"}`}
+        className={`flex w-14 shrink-0 flex-col items-center border-t-2 pt-1.5 text-center ${past ? "border-rule" : "border-accent"}`}
         aria-hidden="true"
       >
         <span className="text-[0.75rem] font-semibold text-slate">{d.month}</span>

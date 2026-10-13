@@ -15,7 +15,7 @@ export function AdminNav({ links }: { links: { href: string; label: string }[] }
                 href={l.href}
                 aria-current={active ? "page" : undefined}
                 className={`block whitespace-nowrap border-b-2 px-3 py-2.5 ${
-                  active ? "border-gold text-ink" : "border-transparent text-slate hover:text-ink"
+                  active ? "border-accent text-ink" : "border-transparent text-slate hover:text-ink"
                 }`}
               >
                 {l.label}
