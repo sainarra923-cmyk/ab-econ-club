@@ -1,6 +1,21 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="8" fill="#0e2340"/>
-  <text x="32" y="38" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="27" font-weight="700" fill="#f5f7fa">AB</text>
-  <rect x="13" y="45" width="38" height="2.5" fill="#3b5ea8"/>
-  <rect x="13" y="50" width="38" height="2.5" fill="#3b5ea8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="26 24 200 200">
+  <!-- Navy disc with a white ring -->
+  <circle cx="126" cy="123" r="99" fill="#0e2340"/>
+  <circle cx="126" cy="123" r="94" fill="none" stroke="#ffffff" stroke-width="3.5"/>
+  <clipPath id="inside"><circle cx="126" cy="123" r="88"/></clipPath>
+  <g clip-path="url(#inside)">
+    <!-- Gold crescent: gold disc with a navy disc over it -->
+    <circle cx="128" cy="123" r="82" fill="#e8b84a"/>
+    <circle cx="106.5" cy="126.3" r="68.8" fill="#0e2340"/>
+    <!-- White crescent: white disc minus an offset disc -->
+    <path fill-rule="evenodd" fill="#ffffff" d="M40.9 122.4 a84.4 84.4 0 1 0 168.8 0 a84.4 84.4 0 1 0 -168.8 0 Z M74 128 a80 80 0 1 0 160 0 a80 80 0 1 0 -160 0 Z"/>
+  </g>
+  <!-- AB monogram: the A's right leg is the B's stem -->
+  <g fill="#ffffff">
+    <polygon points="104,82 123,82 123,92 90,141 74,141"/>
+    <rect x="86" y="116" width="37" height="11"/>
+    <path fill-rule="evenodd" d="M122 82 H148 C160 82 166 92 166 103 C166 111 162 117 156 120 C171 124 180 133 180 145 C180 159 170 169 154 169 H122 Z
+      M134 93 H148 C153 93 155 98 155 103 C155 108 152 113 148 113 H134 Z
+      M134 129 H155 C163 129 167 135 167 143 C167 151 163 157 155 157 H134 Z"/>
+  </g>
 </svg>
