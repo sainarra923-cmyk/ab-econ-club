@@ -29,16 +29,20 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper: #000000;
-    --surface: #0d0f12;
+    --paper: #151515;
+    --surface: #1d1d1d;
     --ink: #ededed;
-    --slate: #a6adb8;
-    --muted: #7d8592;
-    --rule: #24272d;
-    --accent: #7f9fd9;
-    --accent-ink: #9fb6e3;
-    --on-accent: #07142b;
-    --navy-band: #0c1a33;
+    --slate: #a8a8a8;
+    --muted: #808080;
+    --rule: #2e2e2e;
+    /* Navy for lines, buttons, and date marks. Slightly brighter than the
+       light-mode navy so it's still visible on a dark background. */
+    --accent: #2a4a8a;
+    /* Text links and tags: true navy text is unreadable on dark (about 1.6:1
+       contrast), so link text is light and the navy shows in the underline. */
+    --accent-ink: #c9d3e6;
+    --on-accent: #ffffff;
+    --navy-band: #0e2340;
     --on-band: #e7ecf3;
     --on-band-muted: #9fadc2;
     --danger: #f08a80;
@@ -109,6 +113,7 @@ body {
 .link {
   color: var(--accent-ink);
   text-decoration: underline;
+  text-decoration-color: var(--accent);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
 }
