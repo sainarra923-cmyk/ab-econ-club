@@ -197,6 +197,15 @@ alter table public.newsletter_sends enable row level security;
 -- subscribers and newsletter_sends have no policies on purpose:
 -- only the server (with the secret key) can read or write them.
 
+-- Explicit access grants, so this works whether or not the project
+-- exposes new tables automatically. The row rules below still apply.
+grant usage on schema public to anon, authenticated, service_role;
+grant select on public.profiles, public.posts, public.events to anon, authenticated;
+grant insert, update, delete on public.profiles, public.posts, public.events to authenticated;
+revoke all on public.subscribers, public.newsletter_sends from anon, authenticated;
+grant all on public.profiles, public.posts, public.events, public.subscribers, public.newsletter_sends to service_role;
+grant execute on function public.my_profile_id(), public.is_officer(), public.is_admin() to anon, authenticated, service_role;
+
 drop policy if exists "profiles are public" on public.profiles;
 create policy "profiles are public" on public.profiles
   for select using (true);
